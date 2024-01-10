@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:gbsw_hakerton/screens/fridge_screen/fridge_screen.dart';
 import 'package:gbsw_hakerton/screens/main_screen/main_screen.dart';
 import 'package:gbsw_hakerton/screens/search_screen/search_screen.dart';
 import 'package:gbsw_hakerton/screens/setting_screen/setting_screen.dart';
-import 'package:gbsw_hakerton/widgets/splash_widget/splash_widget.dart';
+import 'package:gbsw_hakerton/screens/shoppingcart_screen/shoppingcart_screen.dart';
+import 'package:gbsw_hakerton/widgets/sign_widget.dart';
+import 'package:gbsw_hakerton/widgets/signin_widget.dart';
+import 'package:gbsw_hakerton/widgets/signup_widget.dart';
+import 'package:gbsw_hakerton/widgets/splash_widget.dart';
 import 'package:get/route_manager.dart';
 
 void main() {
@@ -18,15 +23,31 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(
           name: '/splash',
-          page: () => SplashWidget(),
+          page: () => const SplashWidget(),
         ),
-      GetPage(
+        GetPage(
+          name: '/sign',
+          page: () => const SignWidget(),
+        ),
+        GetPage(
+          name: '/sign',
+          page: () => const SignWidget(),
+        ),
+        GetPage(
+          name: '/signin',
+          page: () => const SignInWidget(),
+        ),
+        GetPage(
+          name: '/signup',
+          page: () => const SignUpWidget(),
+        ),
+        GetPage(
           name: '/app',
-          page: () => MyAppScreen(),
+          page: () => const MyAppScreen(),
         ),
         GetPage(
           name: '/main',
-          page: () => MainScreen(),
+          page: () => const MainScreen(),
         ),
       ],
       initialRoute: '/splash',
@@ -42,13 +63,14 @@ class MyAppScreen extends StatefulWidget {
 }
 
 class _MyAppScreenState extends State<MyAppScreen> {
-int _selectedIndex = 0;
+  int _selectedIndex = 0;
 
   final List<Widget> _navIndex = [
-    MainScreen(),
-    SearchScreen(),
-    
-    SettingScreen(),
+    const MainScreen(),
+    const SearchScreen(),
+    const FridgeScreen(),
+    const ShoppingCartScreen(),
+    const SettingScreen(),
   ];
 
   void _onNavTapped(int index) {
@@ -86,7 +108,7 @@ int _selectedIndex = 0;
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings_outlined),
-            label: '설정',
+            label: '레시피',
           ),
         ],
         currentIndex: _selectedIndex,

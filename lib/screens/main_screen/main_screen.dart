@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gbsw_hakerton/utilities/highlightedtext.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -8,6 +9,8 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+  String user = '진현';
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,7 +21,7 @@ class _MainScreenState extends State<MainScreen> {
               children: [
                 Container(
                   child: Padding(
-                    padding: const EdgeInsets.all(30),
+                    padding: const EdgeInsets.all(20),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -64,8 +67,13 @@ class _MainScreenState extends State<MainScreen> {
                                     ),
                                     Row(
                                       children: [
+                                        HighLightedText(
+                                          "user",
+                                          color: Color(0xffFE6470),
+                                          fontSize: 24,
+                                        ),
                                         Text(
-                                          "김진현 님!",
+                                          "님!",
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 24,
@@ -79,13 +87,24 @@ class _MainScreenState extends State<MainScreen> {
                             ),
                           ],
                         ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.menu_rounded,
+                            color: Colors.black,
+                            size: 30,
+                          ),
+                        ),
                       ],
                     ),
                   ),
                 ),
                 Container(
-                  height: 100,
-                  color: Colors.yellow.shade200,
+                  margin: EdgeInsets.fromLTRB(20, 0, 20, 20),
+                  child: Divider(
+                    color: Colors.grey.shade300,
+                    thickness: 1,
+                  ),
                 ),
               ],
             ),

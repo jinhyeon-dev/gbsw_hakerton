@@ -19,7 +19,7 @@ class _SplashWidgetState extends State<SplashWidget>
     Future.delayed(
       const Duration(seconds: 5),
       () {
-        Get.toNamed('/app');
+        Get.toNamed('/sign');
       },
     );
   }
@@ -40,19 +40,13 @@ class _SplashWidgetState extends State<SplashWidget>
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset('assets/icons/icon.png', width: 120),
+                Image.asset('assets/icons/icon.png', width: 150),
                 const Text(
-                  "낭비없는 음식",
+                  "푸드팁",
                   style: TextStyle(
+                    color: Colors.red,
                     fontFamily: 'GmarketSansBold',
-                    fontSize: 14,
-                  ),
-                ),
-                const Text(
-                  "완벽한 소비의 시작",
-                  style: TextStyle(
-                    fontFamily: 'GmarketSansBold',
-                    fontSize: 14,
+                    fontSize: 24,
                   ),
                 ),
               ],
