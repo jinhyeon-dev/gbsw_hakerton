@@ -1,3 +1,7 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_database/firebase_database.dart';
+import 'package:gbsw_hakerton/utilities/signcheack.dart';
+import 'firebase_options.dart';
 import 'package:flutter/material.dart';
 import 'package:gbsw_hakerton/screens/fridge_screen/fridge_screen.dart';
 import 'package:gbsw_hakerton/screens/main_screen/main_screen.dart';
@@ -10,8 +14,12 @@ import 'package:gbsw_hakerton/widgets/signup_widget.dart';
 import 'package:gbsw_hakerton/widgets/splash_widget.dart';
 import 'package:get/route_manager.dart';
 
-void main() {
+void main() async {
   runApp(const MyApp());
+  FirebaseApp app = await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  FirebaseDatabase.instanceFor(app: app);
 }
 
 class MyApp extends StatelessWidget {
@@ -35,7 +43,7 @@ class MyApp extends StatelessWidget {
         ),
         GetPage(
           name: '/signin',
-          page: () => const SignInWidget(),
+          page: () => SignInWidget(),
         ),
         GetPage(
           name: '/signup',
@@ -64,6 +72,10 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/setting',
           page: () => const SettingScreen(),
+        ),
+        GetPage(
+          name: '/signcheack',
+          page: () => const SignCheack(),
         ),
       ],
       initialRoute: '/splash',

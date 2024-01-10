@@ -17,7 +17,7 @@ class _SplashWidgetState extends State<SplashWidget>
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
 
     Future.delayed(
-      const Duration(seconds: 3),
+      const Duration(seconds: 1),
       () {
         Get.toNamed('/sign');
       },

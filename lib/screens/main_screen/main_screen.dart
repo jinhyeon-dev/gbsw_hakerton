@@ -9,8 +9,6 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  String user = '진현';
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -67,7 +65,7 @@ class _MainScreenState extends State<MainScreen> {
                                   Row(
                                     children: [
                                       HighLightedText(
-                                        "user",
+                                        "김진현",
                                         color: Color(0xffFE6470),
                                         fontSize: 24,
                                       ),
