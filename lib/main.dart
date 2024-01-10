@@ -107,7 +107,7 @@ class _MyAppScreenState extends State<MyAppScreen> {
             label: '장바구니',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings_outlined),
+            icon: Icon(Icons.cookie_outlined),
             label: '레시피',
           ),
         ],
