@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "348199927455",
+    "project_id": "gbsw-hakerton",
+    "storage_bucket": "gbsw-hakerton.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348199927455:android:ba4e2dab0e48b5a79eacaa",
+        "android_client_info": {
+          "package_name": "app.chat.flutter.gbsw_hakerton"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBerkt_S8c_H1LiNXhq5QreqiAJO5MR8m8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
