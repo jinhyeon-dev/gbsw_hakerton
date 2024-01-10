@@ -5,7 +5,7 @@ import 'firebase_options.dart';
 import 'package:flutter/material.dart';
 import 'package:gbsw_hakerton/screens/fridge_screen/fridge_screen.dart';
 import 'package:gbsw_hakerton/screens/main_screen/main_screen.dart';
-import 'package:gbsw_hakerton/screens/search_screen/search_screen.dart';
+import 'package:gbsw_hakerton/screens/recipe_screen/recipe_screen.dart';
 import 'package:gbsw_hakerton/screens/setting_screen/setting_screen.dart';
 import 'package:gbsw_hakerton/screens/shoppingcart_screen/shoppingcart_screen.dart';
 import 'package:gbsw_hakerton/widgets/sign_widget.dart';
@@ -119,8 +119,8 @@ class _MyAppScreenState extends State<MyAppScreen> {
             backgroundColor: Colors.white,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: '검색',
+            icon: Icon(Icons.cookie_outlined),
+            label: '레시피',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.kitchen_outlined),
@@ -131,8 +131,8 @@ class _MyAppScreenState extends State<MyAppScreen> {
             label: '장바구니',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.cookie_outlined),
-            label: '레시피',
+            icon: Icon(Icons.settings_outlined),
+            label: '설정',
           ),
         ],
         currentIndex: _selectedIndex,

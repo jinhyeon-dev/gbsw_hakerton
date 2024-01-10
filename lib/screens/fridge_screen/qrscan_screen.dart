@@ -1,3 +1,5 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -142,27 +144,73 @@ class _QrscanScreenState extends State<QrscanScreen> {
             ElevatedButton(
               onPressed: _scanBarcode,
               style: ElevatedButton.styleFrom(
-                    fixedSize: const Size(200, 30),
-                    foregroundColor: Colors.white,
-                    backgroundColor: Colors.red,
-                    textStyle: const TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
+                fixedSize: const Size(200, 30),
+                foregroundColor: Colors.white,
+                backgroundColor: Colors.red,
+                textStyle: const TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               child: Text('바코드 스캔'),
             ),
             SizedBox(height: 20),
-            Column(children: [
-              Text(
-                contentName,
-                style: TextStyle(fontSize: 16),
+            Expanded(
+              child: Column(
+                children: [
+                  Text(
+                    contentName,
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  Text(
+                    contentDay,
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  ElevatedButton(
+                    onPressed: () async {
+                      DataSnapshot data = await FirebaseDatabase.instance
+                          .ref()
+                          .child('list')
+                          .get();
+
+                      // 이름과 제조일자가 불러와지지 않은 경우에는 추가하지 않음
+                      if (_pogDayNameList.isNotEmpty &&
+                          _pogDayCountList.isNotEmpty) {
+                        String contentName = _pogDayNameList[0];
+                        int? temp = convertToDays(_pogDayCountList[0]);
+                        String contentDay = temp != null ? customDay(temp) : '';
+
+                        FirebaseDatabase.instance.ref().child('list').update({
+                          '${data.children.length}': {
+                            'name': contentName,
+                            'date': contentDay,
+                          }
+                        });
+
+                        if (context.mounted) {
+                          FocusScope.of(context).unfocus();
+                        }
+
+                        Navigator.pop(context);
+                      } else {
+                        // 이름 또는 제조일자가 불러와지지 않은 경우, 알림 등을 추가할 수 있습니다.
+                        print('데이터가 없어서 추가되지 않았습니다.');
+                      }
+                    },
+                    style: ElevatedButton.styleFrom(
+                      fixedSize: const Size(200, 30),
+                      foregroundColor: Colors.white,
+                      backgroundColor: Colors.red,
+                      textStyle: const TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    child: Text('냉장고에 넣기'),
+                  ),
+                ],
               ),
-              Text(
-                contentDay,
-                style: TextStyle(fontSize: 16),
-              )
-            ]),
+            ),
           ],
         ),
       ),
