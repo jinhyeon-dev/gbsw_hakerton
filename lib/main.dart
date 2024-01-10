@@ -49,6 +49,22 @@ class MyApp extends StatelessWidget {
           name: '/main',
           page: () => const MainScreen(),
         ),
+        GetPage(
+          name: '/shop',
+          page: () => const ShoppingCartScreen(),
+        ),
+        GetPage(
+          name: '/fredge',
+          page: () => const FridgeScreen(),
+        ),
+        GetPage(
+          name: '/search',
+          page: () => const SearchScreen(),
+        ),
+        GetPage(
+          name: '/setting',
+          page: () => const SettingScreen(),
+        ),
       ],
       initialRoute: '/splash',
     );

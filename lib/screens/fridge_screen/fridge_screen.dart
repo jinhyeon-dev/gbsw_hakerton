@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gbsw_hakerton/main.dart';
 import 'package:gbsw_hakerton/screens/shoppingcart_screen/shoppingcart_screen.dart';
 
 class FridgeScreen extends StatelessWidget {
@@ -28,35 +27,35 @@ class FridgeScreen extends StatelessWidget {
               child: Column(
                 children: [
                   Container(
-                    margin: EdgeInsets.only(bottom: 10),
+                    margin: const EdgeInsets.only(bottom: 10),
                     height: 100,
                     decoration: BoxDecoration(
                       border: Border.all(width: 1, color: Colors.grey.shade300),
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      borderRadius: const BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(bottom: 10),
+                    margin: const EdgeInsets.only(bottom: 10),
                     height: 100,
                     decoration: BoxDecoration(
                       border: Border.all(width: 1, color: Colors.grey.shade300),
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      borderRadius: const BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(bottom: 10),
+                    margin: const EdgeInsets.only(bottom: 10),
                     height: 100,
                     decoration: BoxDecoration(
                       border: Border.all(width: 1, color: Colors.grey.shade300),
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      borderRadius: const BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(bottom: 10),
+                    margin: const EdgeInsets.only(bottom: 10),
                     height: 100,
                     decoration: BoxDecoration(
                       border: Border.all(width: 1, color: Colors.grey.shade300),
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      borderRadius: const BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
                 ],
@@ -71,11 +70,11 @@ class FridgeScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (MyAppScreen) => ShoppingCartScreen()),
+                    builder: (content) => const ShoppingCartScreen()),
               );
             },
             tooltip: 'a',
-            backgroundColor: Color(0xffFE6470),
+            backgroundColor: const Color(0xffFE6470),
             child: const Icon(Icons.add, color: Colors.white, size: 30),
           ),
         ),
