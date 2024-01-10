@@ -34,27 +34,31 @@ class _SplashWidgetState extends State<SplashWidget>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset('assets/icons/icon.png', width: 120),
-            Text(
-              "낭비없는 음식",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-              ),
+      body: Stack(
+        children: [
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset('assets/icons/icon.png', width: 120),
+                const Text(
+                  "낭비없는 음식",
+                  style: TextStyle(
+                    fontFamily: 'GmarketSansBold',
+                    fontSize: 14,
+                  ),
+                ),
+                const Text(
+                  "완벽한 소비의 시작",
+                  style: TextStyle(
+                    fontFamily: 'GmarketSansBold',
+                    fontSize: 14,
+                  ),
+                ),
+              ],
             ),
-            Text(
-              "완벽한 소비의 시작",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
