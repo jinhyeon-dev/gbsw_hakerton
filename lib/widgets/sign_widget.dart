@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gbsw_hakerton/main.dart';
-import 'package:gbsw_hakerton/screens/main_screen/main_screen.dart';
 import 'package:gbsw_hakerton/utilities/signcheack.dart';
 import 'package:gbsw_hakerton/widgets/signin_widget.dart';
 import 'package:gbsw_hakerton/widgets/signup_widget.dart';
@@ -33,7 +31,7 @@ class SignWidget extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SignInWidget()),
+                    MaterialPageRoute(builder: (context) => SignSearch()),
                   );
                 },
                 child: Container(

@@ -38,8 +38,8 @@ class MyApp extends StatelessWidget {
           page: () => const SignWidget(),
         ),
         GetPage(
-          name: '/sign',
-          page: () => const SignWidget(),
+          name: '/signsearch',
+          page: () => const SignSearch(),
         ),
         GetPage(
           name: '/signin',
@@ -72,10 +72,6 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/setting',
           page: () => const SettingScreen(),
-        ),
-        GetPage(
-          name: '/signcheack',
-          page: () => const SignCheack(),
         ),
       ],
       initialRoute: '/splash',

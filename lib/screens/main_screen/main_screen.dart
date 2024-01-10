@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:gbsw_hakerton/utilities/highlightedtext.dart';
 
@@ -85,9 +86,9 @@ class _MainScreenState extends State<MainScreen> {
                         ],
                       ),
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () => FirebaseAuth.instance.signOut(),
                         icon: const Icon(
-                          Icons.menu_rounded,
+                          Icons.logout,
                           color: Colors.black,
                           size: 30,
                         ),
@@ -149,42 +150,111 @@ class _MainScreenState extends State<MainScreen> {
                     ),
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 20),
-                        child: Row(
-                          children: [
-                            Container(
-                              margin: const EdgeInsets.only(right: 20),
-                              width: 150,
-                              height: 180,
-                              decoration: const BoxDecoration(
-                                color: Colors.red,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10)),
-                              ),
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Column(
+                              children: [
+                                Container(
+                                  margin: const EdgeInsets.all(10),
+                                  width: 150,
+                                  height: 180,
+                                  decoration: BoxDecoration(
+                                    color: Colors.red,
+                                    border: Border.all(
+                                        width: 1, color: Colors.grey),
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
+                                  ),
+                                  child: ClipRRect(
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
+                                    child: Image.asset(
+                                        'assets/images/apple.png',
+                                        width: 30,
+                                        fit: BoxFit.cover),
+                                  ),
+                                ),
+                                const Text(
+                                  "사과",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                              ],
                             ),
-                            Container(
-                              margin: const EdgeInsets.only(right: 20),
-                              width: 150,
-                              height: 180,
-                              decoration: const BoxDecoration(
-                                color: Colors.red,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10)),
-                              ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Column(
+                              children: [
+                                Container(
+                                  margin: const EdgeInsets.all(10),
+                                  width: 150,
+                                  height: 180,
+                                  decoration: BoxDecoration(
+                                    color: Colors.red,
+                                    border: Border.all(
+                                        width: 1, color: Colors.grey),
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
+                                  ),
+                                  child: ClipRRect(
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
+                                    child: Image.asset(
+                                        'assets/images/watermalon.png',
+                                        width: 30,
+                                        fit: BoxFit.cover),
+                                  ),
+                                ),
+                                const Text(
+                                  "수박",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                              ],
                             ),
-                            Container(
-                              margin: const EdgeInsets.only(right: 20),
-                              width: 150,
-                              height: 180,
-                              decoration: const BoxDecoration(
-                                color: Colors.red,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10)),
-                              ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Column(
+                              children: [
+                                Container(
+                                  margin: const EdgeInsets.all(10),
+                                  width: 150,
+                                  height: 180,
+                                  decoration: BoxDecoration(
+                                    color: Colors.red,
+                                    border: Border.all(
+                                        width: 1, color: Colors.grey),
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
+                                  ),
+                                  child: ClipRRect(
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
+                                    child: Image.asset(
+                                        'assets/images/banana.png',
+                                        width: 30,
+                                        fit: BoxFit.cover),
+                                  ),
+                                ),
+                                const Text(
+                                  "바나나",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
                     const Padding(
@@ -203,42 +273,111 @@ class _MainScreenState extends State<MainScreen> {
                     ),
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 20),
-                        child: Row(
-                          children: [
-                            Container(
-                              margin: const EdgeInsets.only(right: 20),
-                              width: 150,
-                              height: 180,
-                              decoration: const BoxDecoration(
-                                color: Colors.red,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10)),
-                              ),
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Column(
+                              children: [
+                                Container(
+                                  margin: const EdgeInsets.all(10),
+                                  width: 150,
+                                  height: 180,
+                                  decoration: BoxDecoration(
+                                    color: Colors.red,
+                                    border: Border.all(
+                                        width: 1, color: Colors.grey),
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
+                                  ),
+                                  child: ClipRRect(
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
+                                    child: Image.asset(
+                                        'assets/images/flour.png',
+                                        width: 30,
+                                        fit: BoxFit.cover),
+                                  ),
+                                ),
+                                const Text(
+                                  "밀가루",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                              ],
                             ),
-                            Container(
-                              margin: const EdgeInsets.only(right: 20),
-                              width: 150,
-                              height: 180,
-                              decoration: const BoxDecoration(
-                                color: Colors.red,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10)),
-                              ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Column(
+                              children: [
+                                Container(
+                                  margin: const EdgeInsets.all(10),
+                                  width: 150,
+                                  height: 180,
+                                  decoration: BoxDecoration(
+                                    color: Colors.red,
+                                    border: Border.all(
+                                        width: 1, color: Colors.grey),
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
+                                  ),
+                                  child: ClipRRect(
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
+                                    child: Image.asset(
+                                        'assets/images/karet.png',
+                                        width: 30,
+                                        fit: BoxFit.cover),
+                                  ),
+                                ),
+                                const Text(
+                                  "당근주스",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                              ],
                             ),
-                            Container(
-                              margin: const EdgeInsets.only(right: 20),
-                              width: 150,
-                              height: 180,
-                              decoration: const BoxDecoration(
-                                color: Colors.red,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10)),
-                              ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Column(
+                              children: [
+                                Container(
+                                  margin: const EdgeInsets.all(10),
+                                  width: 150,
+                                  height: 180,
+                                  decoration: BoxDecoration(
+                                    color: Colors.red,
+                                    border: Border.all(
+                                        width: 1, color: Colors.grey),
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
+                                  ),
+                                  child: ClipRRect(
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
+                                    child: Image.asset(
+                                        'assets/images/concan.png',
+                                        width: 30,
+                                        fit: BoxFit.cover),
+                                  ),
+                                ),
+                                const Text(
+                                  "옥수수콘 통조림",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
                   ],

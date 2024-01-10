@@ -6,7 +6,13 @@ class ShoppingCartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text("adaf"),
+      body: SafeArea(
+        child: Column( 
+          children: [ 
+            
+          ],
+        ),
+      ),
     );
   }
 }

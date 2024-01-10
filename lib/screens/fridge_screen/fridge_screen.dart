@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gbsw_hakerton/screens/shoppingcart_screen/shoppingcart_screen.dart';
+import 'package:gbsw_hakerton/screens/fridge_screen/qrscan_screen.dart';
 
 class FridgeScreen extends StatelessWidget {
   const FridgeScreen({super.key});
@@ -37,7 +37,7 @@ class FridgeScreen extends StatelessWidget {
                       padding: const EdgeInsets.all(10),
                       child: Stack(
                         children: [
-                          Column(
+                          const Column(
                             children: [
                               Row(
                                 children: [
@@ -72,7 +72,7 @@ class FridgeScreen extends StatelessWidget {
                                 children: [
                                   IconButton(
                                     onPressed: () {},
-                                    icon: Icon(Icons.close,
+                                    icon: const Icon(Icons.close,
                                         color: Colors.red, size: 30),
                                   ),
                                 ],
@@ -94,12 +94,12 @@ class FridgeScreen extends StatelessWidget {
                       padding: const EdgeInsets.all(10),
                       child: Stack(
                         children: [
-                          Column(
+                          const Column(
                             children: [
                               Row(
                                 children: [
                                   Text(
-                                    "1월 11일",
+                                    "1월 8일",
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 18,
@@ -110,7 +110,7 @@ class FridgeScreen extends StatelessWidget {
                               Row(
                                 children: [
                                   Text(
-                                    "사과, 당근, 바나나, 수박, 삼겹살...",
+                                    "사과, 상추, 삼겹살, 바나나, 귤...",
                                     style: TextStyle(
                                       color: Colors.grey,
                                       fontWeight: FontWeight.bold,
@@ -129,7 +129,7 @@ class FridgeScreen extends StatelessWidget {
                                 children: [
                                   IconButton(
                                     onPressed: () {},
-                                    icon: Icon(Icons.close,
+                                    icon: const Icon(Icons.close,
                                         color: Colors.red, size: 30),
                                   ),
                                 ],
@@ -151,12 +151,12 @@ class FridgeScreen extends StatelessWidget {
                       padding: const EdgeInsets.all(10),
                       child: Stack(
                         children: [
-                          Column(
+                          const Column(
                             children: [
                               Row(
                                 children: [
                                   Text(
-                                    "1월 11일",
+                                    "1월 1일",
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 18,
@@ -167,7 +167,7 @@ class FridgeScreen extends StatelessWidget {
                               Row(
                                 children: [
                                   Text(
-                                    "사과, 당근, 바나나, 수박, 삼겹살...",
+                                    "떡, 사골국, 계란, 김가루, 김치...",
                                     style: TextStyle(
                                       color: Colors.grey,
                                       fontWeight: FontWeight.bold,
@@ -186,7 +186,7 @@ class FridgeScreen extends StatelessWidget {
                                 children: [
                                   IconButton(
                                     onPressed: () {},
-                                    icon: Icon(Icons.close,
+                                    icon: const Icon(Icons.close,
                                         color: Colors.red, size: 30),
                                   ),
                                 ],
@@ -208,12 +208,12 @@ class FridgeScreen extends StatelessWidget {
                       padding: const EdgeInsets.all(10),
                       child: Stack(
                         children: [
-                          Column(
+                          const Column(
                             children: [
                               Row(
                                 children: [
                                   Text(
-                                    "1월 11일",
+                                    "23년 12월 25일",
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 18,
@@ -224,7 +224,7 @@ class FridgeScreen extends StatelessWidget {
                               Row(
                                 children: [
                                   Text(
-                                    "사과, 당근, 바나나, 수박, 삼겹살...",
+                                    "감자, 가지, 사금치, 어묵, 두부...",
                                     style: TextStyle(
                                       color: Colors.grey,
                                       fontWeight: FontWeight.bold,
@@ -243,7 +243,7 @@ class FridgeScreen extends StatelessWidget {
                                 children: [
                                   IconButton(
                                     onPressed: () {},
-                                    icon: Icon(Icons.close,
+                                    icon: const Icon(Icons.close,
                                         color: Colors.red, size: 30),
                                   ),
                                 ],
@@ -265,12 +265,12 @@ class FridgeScreen extends StatelessWidget {
                       padding: const EdgeInsets.all(10),
                       child: Stack(
                         children: [
-                          Column(
+                          const Column(
                             children: [
                               Row(
                                 children: [
                                   Text(
-                                    "1월 11일",
+                                    "23년 12월 18일",
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 18,
@@ -281,7 +281,7 @@ class FridgeScreen extends StatelessWidget {
                               Row(
                                 children: [
                                   Text(
-                                    "사과, 당근, 바나나, 수박, 삼겹살...",
+                                    "만두, 삼겹살, 치킨, 피자, 어묵...",
                                     style: TextStyle(
                                       color: Colors.grey,
                                       fontWeight: FontWeight.bold,
@@ -300,7 +300,64 @@ class FridgeScreen extends StatelessWidget {
                                 children: [
                                   IconButton(
                                     onPressed: () {},
-                                    icon: Icon(Icons.close,
+                                    icon: const Icon(Icons.close,
+                                        color: Colors.red, size: 30),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(bottom: 10),
+                    height: 100,
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 1, color: Colors.grey.shade300),
+                      borderRadius: const BorderRadius.all(Radius.circular(10)),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Stack(
+                        children: [
+                          const Column(
+                            children: [
+                              Row(
+                                children: [
+                                  Text(
+                                    "23년 12월 8일",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    "어묵, 스시, 치킨, 만두, 라면...",
+                                    style: TextStyle(
+                                      color: Colors.grey,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  IconButton(
+                                    onPressed: () {},
+                                    icon: const Icon(Icons.close,
                                         color: Colors.red, size: 30),
                                   ),
                                 ],
@@ -323,12 +380,12 @@ class FridgeScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (content) => const ShoppingCartScreen()),
+                    builder: (content) => const QrscanScreen()),
               );
             },
             tooltip: 'a',
             backgroundColor: const Color(0xffFE6470),
-            child: const Icon(Icons.add, color: Colors.white, size: 30),
+            child: const Icon(Icons.camera_alt_outlined, color: Colors.white, size: 30),
           ),
         ),
       ),

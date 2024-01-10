@@ -127,11 +127,6 @@ class SignInWidget extends StatelessWidget {
                       email: email,
                       password: password,
                     );
-
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const MyAppScreen()),
-                    );
                   },
                   style: ElevatedButton.styleFrom(
                     fixedSize: const Size(200, 30),
