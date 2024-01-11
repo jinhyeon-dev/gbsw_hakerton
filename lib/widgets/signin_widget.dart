@@ -1,6 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:gbsw_hakerton/main.dart';
+import 'package:gbsw_hakerton/widgets/sign_widget.dart';
+import 'package:get/route_manager.dart';
 
 class SignInWidget extends StatelessWidget {
   SignInWidget({super.key});
@@ -17,6 +19,16 @@ class SignInWidget extends StatelessWidget {
         FocusScope.of(context).unfocus();
       },
       child: Scaffold(
+        appBar: AppBar(
+          leading: IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (content) => SignWidget()),
+                );
+              },
+              icon: Icon(Icons.arrow_back, size: 30)),
+        ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

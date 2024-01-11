@@ -43,25 +43,38 @@ class FridgeScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
-                              width: 1000,
-                              height: 50,
-                              child: Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Text(
-                                        itemDate,
-                                        style:
-                                            Theme.of(context).textTheme.titleMedium,
-                                      ),
-                                    ],
-                                  ),
-                                  Row(
-                                    children: [
-                                      Text(itemName),
-                                    ],
-                                  ),
-                                ],
+                              margin: EdgeInsets.fromLTRB(20, 20, 20, 5),
+                              width: 340,
+                              height: 100,
+                              decoration: BoxDecoration(
+                                color: Colors.green.shade200,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(30)),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(25),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Text(
+                                          itemDate,
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 20,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Text(itemName, style: TextStyle( 
+                                          fontWeight: FontWeight.bold,
+                                        ),),
+                                      ],
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ],
