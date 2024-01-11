@@ -1,4 +1,3 @@
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:gbsw_hakerton/main.dart';
 import 'package:gbsw_hakerton/widgets/signin_widget.dart';
